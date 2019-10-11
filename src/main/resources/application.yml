@@ -1,0 +1,20 @@
+spring.thymeleaf.prefix: classpath:/templates/
+spring.thymeleaf.suffix: .html
+spring.thymeleaf.mode: HTML
+spring.thymeleaf.cache: true
+
+server:
+  port: 9000
+  servlet:
+    context-path: "/api/v1/aligenie/"
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://118.190.202.148:3306/BUPT_IOT?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: Gantch815
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package:  cn.edu.bupt.intelligentsound.entity
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Gantch</title>
+	<meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,width=device-width">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<div class="login_bg clearfix">
+		<form action="/api/v1/aligenie/auth/userlogin" method="post">
+		<div class="login_ban clearfix">
+			<h2>Gantch Smart</h2>
+			<div class="login_content">
+				<p style="border-bottom: 1px solid #e5e5e5;" class="clearfix">
+					<!--<label for="username"></label>-->
+					<input type="text" id="username" name="username" placeholder="Phone number">
+				</p>
+				<p class="clearfix">
+					<!--<label for="password"></label>-->
+					<input type="password" id="password" name="password" placeholder="Password">
+				</p>
+			</div>
+			<p style="color:red;margin:0% 5%;" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+			<div class="login_submit">
+				<input type="submit" value="SIGN IN">
+			</div>
+		</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="loginTitle"></title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+    <image src="../logo/logo.png"></image>
+    <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3 form-box">
+            <div class="form-bottom">
+                <form role="form" action="/api/v1/aligenie/auth/userlogin" method="post" class="login-form">
+                    <div class="form-group">
+                        <label class="sr-only" for="form-username">Username</label>
+                        <input type="text" name="username" placeholder="请输入用户名..." class="form-username form-control" id="form-username">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="form-password">Password</label>
+                        <input type="password" name="password" placeholder="请输入密码..." class="form-password form-control" id="form-password">
+                    </div>
+                    <div>
+                    <p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+                    </div>
+                    <button type="submit" class="btn btn-danger" id="login">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+</body>
+
+</html>
